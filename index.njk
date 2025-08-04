@@ -11,7 +11,7 @@ aboutEvent: A virtual conference featuring work by members of the ACH community.
     <div class="hero-container" >
     <img height="150" src="/assets/img/noun-sparkles-7598231-00449F.png" / >
     <h1 class="mb-4 pb-0"><span class="ach">Responsible</span>AI</h1>
-    <a target="_blank" href="" class="about-btn scrollto">Schedule</a>
+    <a target="_blank" href="#schedule" class="about-btn scrollto">Schedule</a>
     </div>
   </div>
   
@@ -42,7 +42,6 @@ aboutEvent: A virtual conference featuring work by members of the ACH community.
   </section><!-- End About Section -->
   {% endif %}
 
-  {% if settings.program %}
   <!-- ======= Schedule Section ======= -->
     <section id="schedule" class="section-with-bg">
       <div class="container" data-aos="fade-up">
@@ -51,180 +50,91 @@ aboutEvent: A virtual conference featuring work by members of the ACH community.
           <p></p>
         </div>
 
-        <ul class="nav nav-tabs" role="tablist" data-aos="fade-up" data-aos-delay="100">
-          <li class="nav-item">
-            <a class="nav-link active" href="#day-1" role="tab" data-bs-toggle="tab">June 29</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#day-2" role="tab" data-bs-toggle="tab">June 30</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#day-3" role="tab" data-bs-toggle="tab">July 1</a>
-          </li>
-        </ul>
-
-        <h3 class="sub-heading">This is our current schedule. Once the session is over we will upload a recording of each session when possible.</h3>
+        
 
         <div class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200">
           <!-- Schedule Day 1 -->
           <!-- https://stackoverflow.com/questions/11770367/use-javascript-to-convert-a-date-string-with-timezone-to-a-date-object-in-local -->
           <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
-             {% set en_schedule = collections.sessions %}
-            
-            {% for item in en_schedule|sort(attribute='data.time') %}
-              {% if item.data.day == 1 %}
+             
               <div class="row schedule-item">
-              <div class="col-md-2"><time>{{ item.data.time.toLocaleString('en', { dateStyle:'short', timeStyle: 'short', timeZone: 'America/New_York' }) }}</time></div>
+              <div class="col-md-2"><time>August 27, 2025, 3-4 pm</time></div>
               <div class="col-md-10">
-                <h4>{{ item.data.title }}</h4>
-                <p>{{ item.data.description }}</p>
-                {% if item.data.recording %}
-                <a target="_blank" href="{{ item.data.recording }}">link</a>
-                {% endif %}
+                <h4>Studying the Field: Applications of AI that Every Scholar Can Use</h4>
+                <p>description</p>
+                
               </div>
             </div>
-              {% endif %}
-            {% endfor %}
+             
           </div>
           <!-- End Schdule Day 1 -->
 
-          <!-- Schdule Day 2 -->
-          <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
-            {% for item in en_schedule %}
-              {% if item.data.day == 2 %}
+          <!-- Schedule Day 2 -->
+          <!-- https://stackoverflow.com/questions/11770367/use-javascript-to-convert-a-date-string-with-timezone-to-a-date-object-in-local -->
+          <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-2">
+             
               <div class="row schedule-item">
-              <div class="col-md-2"><time>{{ item.data.time }}</time></div>
+              <div class="col-md-2"><time>September 3, 2025, 3-4 pm</time></div>
               <div class="col-md-10">
-                <h4>{{ item.data.title }}</h4>
-                <p>{{ item.data.description }}</p>
-                {% if item.data.url %}
-                <a href="{{ item.data.url }}">link</a>
-                {% endif %}
+                <h4>The Anatomy of a Chatbot</h4>
+                <p>description</p>
+                
               </div>
             </div>
-              {% endif %}
-            {% endfor %}
+             
           </div>
           <!-- End Schdule Day 2 -->
 
-          <!-- Schdule Day 3 -->
-          <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-3">
-            {% for item in en_schedule %}
-              {% if item.data.day == 3 %}
+          <!-- Schedule Day 3 -->
+          <!-- https://stackoverflow.com/questions/11770367/use-javascript-to-convert-a-date-string-with-timezone-to-a-date-object-in-local -->
+          <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-3">
+             
               <div class="row schedule-item">
-              <div class="col-md-2"><time>{{ item.data.time }}</time></div>
+              <div class="col-md-2"><time>October 15, 2025, 3-4 pm</time></div>
               <div class="col-md-10">
-                <h4>{{ item.data.title }}</h4>
-                <p>{{ item.data.description }}</p>
-                {% if item.data.recording %}
-                <a href="{{ item.data.url }}">link</a>
-                {% endif %}
+                <h4>AI and Scholarly Research</h4>
+                <p>description</p>
+                
               </div>
             </div>
-              {% endif %}
-            {% endfor %}
+             
           </div>
           <!-- End Schdule Day 3 -->
 
+          <!-- Schedule Day 4 -->
+          <!-- https://stackoverflow.com/questions/11770367/use-javascript-to-convert-a-date-string-with-timezone-to-a-date-object-in-local -->
+          <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-4">
+             
+              <div class="row schedule-item">
+              <div class="col-md-2"><time>November 12, 2025, 3-4 pm</time></div>
+              <div class="col-md-10">
+                <h4>From Proof of Concept to Research Software </h4>
+                <p>description</p>
+                
+              </div>
+            </div>
+             
+          </div>
+          <!-- End Schdule Day 4 -->
+
+          <!-- Schedule Day 5 -->
+          <!-- https://stackoverflow.com/questions/11770367/use-javascript-to-convert-a-date-string-with-timezone-to-a-date-object-in-local -->
+          <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-5">
+             
+              <div class="row schedule-item">
+              <div class="col-md-2"><time>December 10, 2025, 3-4 pm</time></div>
+              <div class="col-md-10">
+                <h4>Evaluation and Iterative Development with AI</h4>
+                <p>description</p>
+                
+              </div>
+            </div>
+             
+          </div>
+          <!-- End Schdule Day 5 -->
+          
         </div>
 
       </div>
 
     </section><!-- End Schedule Section -->
-{% endif %}
-{% if settings.speakers %}
-<!-- ======= Speakers Section ======= -->
-    <section id="speakers">
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Keynote Speakers</h2>
-          <p>Here are some of our speakers</p>
-        </div>
-        
-        <div class="row">
-        {% set speakers = collections.speakers %}
-        {% for speaker in speakers %}
-        
-          <div class="col-lg-4 col-md-6">
-            <div class="speaker" data-aos="fade-up" data-aos-delay="100">
-              <img src="{{ speaker.data.image }}" alt="{{ speaker.data.name }}" class="img-fluid">
-              <div class="details">
-                <h3><a href="speaker-details.html">{{ speaker.data.name }}</a></h3>
-                <p>{{ speaker.data.description }}</p>
-                
-              </div>
-            </div>
-          </div>
-        {% endfor %}
-          
-          
-        </div>
-      </div>
-
-    </section><!-- End Speakers Section -->
-{% endif %}
-{% if settings.partners %}
-    <!-- ======= Supporters Section ======= -->
-    <section id="partners" class="section-with-bg">
-
-      <div class="container" data-aos="fade-up">
-        <div class="section-header">
-          <h2>Partners</h2>
-        </div>
-        
-        <div class="row no-gutters supporters-wrap clearfix" data-aos="zoom-in" data-aos-delay="100">
-          {% set partners = collections.partners %}
-        {% for partner in partners %} 
-        {# {% for name, item in partner %}
-      <li>{{ name }}: {{ item }}</li>
-   {% endfor %} #}
-      
-        <div class="col-lg-6 col-md-6 col-xs-6">
-            <div class="supporter-logo">
-              <img src="{{ partner.data.image }}" class="rounded img-fluid" alt="{{ partner.data.name }}">
-            </div>
-          </div>
-        {% endfor %}
-          
-          
-
-        </div>
-
-      </div>
-
-    </section><!-- End Sponsors Section -->
-    {% endif %}
-    {% if settings.faq %}
-    <!-- =======  F.A.Q Section ======= -->
-    <section id="faq">
-
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-header">
-          <h2>F.A.Q </h2>
-        </div>
-
-        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-9">
-
-            <ul class="faq-list">
-              {% for faq in en_faq.items %}
-              <li>
-                <div data-bs-toggle="collapse" class="collapsed question" href="#faq{{loop.index}}">{{ faq.question }} <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                <div id="faq{{loop.index}}" class="collapse" data-bs-parent=".faq-list">
-                  <p>
-                    {{ faq.answer }}
-                  </p>
-                </div>
-              </li>
-              {% endfor %}
-              
-            </ul>
-
-          </div>
-        </div>
-
-      </div>
-
-    </section><!-- End  F.A.Q Section -->
-{% endif %}
