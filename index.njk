@@ -30,8 +30,9 @@ aboutEvent: Responsible AI is a series of workshops that will introduce you to t
         </div>
 
         
-
+        
         <div class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+        <h3> Open Sessions</h3>
           <!-- Schedule Day 1 -->
           <!-- https://stackoverflow.com/questions/11770367/use-javascript-to-convert-a-date-string-with-timezone-to-a-date-object-in-local -->
           <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
@@ -65,10 +66,12 @@ aboutEvent: Responsible AI is a series of workshops that will introduce you to t
              
           </div>
           <!-- End Schdule Day 2 -->
+        <h3> Fellows Sessions</h3>
 
           <!-- Schedule Day 3 -->
           <!-- https://stackoverflow.com/questions/11770367/use-javascript-to-convert-a-date-string-with-timezone-to-a-date-object-in-local -->
           <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-3">
+                <a href="#contact"><button type="button" class="btn btn-primary">Apply here</button></a>
              
               <div class="row schedule-item">
               <div class="col-md-2"><time>October 15, 2025, 3-4 pm</time></div>
@@ -157,5 +160,54 @@ aboutEvent: Responsible AI is a series of workshops that will introduce you to t
       
 
     </section>
+<section id="contact" class="contact section">
+   <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Fellows Application</h2>
+        <p>In the Responsible AI sessions in October to December you will contribute to a shared project that will walk you through the process of AI research software development, from ideation to protoyping, evaluation and finally functioning research software. 
+          To participate, you will need to attend all three sessions. This will be hands-on and collaborative work. You do not have to be a programmer or have prior experience with AI. There is limited space. Please complete the form below to be considered for this fellowship.
+        </p>
+      </div><!-- End Section Title -->
 
-    
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-12">
+            <form name="contact" method="POST" data-netlify="true" class="php-email-form" data-aos="fade-up" data-aos-delay="400"> 
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+                
+                <div class="col-md-12 ">
+                  <input type="checkbox" id="scales" name="scales" />
+
+                  <label for="scales">I am able to attend all sessions (October 15, 2025, 3-4 pm, November 12, 2025, 3-4 pm, December 10, 2025, 3-4 pm)</label>
+
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Department" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="message">What would you most like to gain from these sessions? What could you contribute to the group?</label>
+                  <textarea class="form-control" name="message" rows="20" placeholder="" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Application</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+      </div>
+      </section>
