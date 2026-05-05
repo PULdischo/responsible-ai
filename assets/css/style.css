@@ -951,6 +951,66 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Archive Section
+--------------------------------------------------------------*/
+#archive {
+  padding: 60px 0;
+}
+
+#archive .schedule-item {
+  border-bottom: 1px solid #cad4f6;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  transition: background-color ease-in-out 0.3s;
+}
+
+#archive .schedule-item:hover {
+  background-color: #fff;
+}
+
+#archive .schedule-item time {
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
+#archive .schedule-item h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+#archive .schedule-item p {
+  font-style: italic;
+  color: #152b79;
+  margin-bottom: 10px;
+}
+
+#archive .archive-materials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+#archive .archive-materials a {
+  text-decoration: none;
+}
+
+#archive .archive-tag {
+  display: inline-block;
+  background-color: #e8ecf8;
+  color: #19328e;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 2px 8px;
+  border-radius: 20px;
+  margin-right: 4px;
+  margin-bottom: 6px;
+}
+
+/*--------------------------------------------------------------
 # Venue Section
 --------------------------------------------------------------*/
 #venue {

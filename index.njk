@@ -29,68 +29,77 @@ aboutEvent: Responsible AI is a series of workshops that will introduce you to t
       <div class="container" data-aos="fade-up">
         <div class="section-header">
           <h2>Schedule</h2>
-          <p>The responsible AI workshop series will focus this Spring on the multimodal capabilities of generative AI models. These sessions will be of interest to anyone working with images, video, or audio materials. We’ll investigate the new capabilities of vision-language models and connect them with the needs of academic researchers.</p>
+          <p>The AY 2025–26 workshop series on multimodal generative AI is now complete — browse the materials in the <a href="#archive" class="scrollto">Past Sessions</a> archive below. We'll return in fall 2026 with a new series for AY 2026–27.</p>
         </div>
 
         
         
-        <div class="tab-content row justify-content-center" data-aos="fade-up" data-aos-delay="200">
-          </p>
-          <!-- Schedule Day 1 -->
-          <!-- https://stackoverflow.com/questions/11770367/use-javascript-to-convert-a-date-string-with-timezone-to-a-date-object-in-local -->
-          <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-1">
-             
-              <div class="row schedule-item">
-              <div class="col-md-2"><time>January 28, 2026, 3-4 pm</time></div>
-              <div class="col-md-10">
-                <h4>Visual reasoning and chain of thought</h4>
-                <p>Recent models can reason about the visual contents of images. These models can “think aloud” about the meaning and relationships between objects. This capability enables more effective recognition of signs and other visual information, including their contextual information within the image. How might this capability further visual analysis, interpretation, and distant viewing?</p>
-              <br>
-              <a href="https://libcal.princeton.edu/event/16041508"><button type="button" class="btn btn-light">Register here</button></a>
-              </div>
-            </div>
-             
-          </div>
-          <!-- End Schdule Day 1 -->
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-9">
 
-          <!-- Schedule Day 2 -->
-          <!-- https://stackoverflow.com/questions/11770367/use-javascript-to-convert-a-date-string-with-timezone-to-a-date-object-in-local -->
-          <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-2">
-             
-              <div class="row schedule-item">
-              <div class="col-md-2"><time>February 25, 2026, 3-4 pm</time></div>
+            
+            <!-- AY 2026–27 placeholder -->
+            <div class="row schedule-item" style="opacity: 0.55;">
+              <div class="col-md-2"><time>Fall 2026</time></div>
               <div class="col-md-10">
-                <h4>Visual tool calling</h4>
-                <p>Multimodal AI models can include visual tools that enable them to manipulate images or retrieve external information. A zoom tool can be used to focus on a specific section of a painting. A reverse image search tool can find similar images across the Web. This visual search can retrieve metadata that improves the recognition and interpretation of visual information. We will begin with existing visual tools and consider which additional tools could aid research.</p>
-                <br>
-                <a href="https://libcal.princeton.edu/event/16041988"><button type="button" class="btn btn-light">Register here</button></a>
+                <h4>AY 2026–27 series <span>— coming soon</span></h4>
+                <p>New sessions will be announced in fall 2026. Topics and dates to be confirmed.</p>
               </div>
             </div>
-             
+
           </div>
-         
-          <!-- Schedule Day 4 -->
-          <!-- https://stackoverflow.com/questions/11770367/use-javascript-to-convert-a-date-string-with-timezone-to-a-date-object-in-local -->
-          <div role="tabpanel" class="col-lg-9 tab-pane fade show active" id="day-4">
-             
-              <div class="row schedule-item">
-              <div class="col-md-2"><time>April 1, 2026, 3-4 pm</time></div>
-              <div class="col-md-10">
-                <h4>Video and temporal understanding</h4>
-                <p>Vision-language models can process video and image series. Additionally, they are trained to ground their response in time.  This allows them to indicate when a particular event or shift occurs in the film. This session will explore the use of vision-language models for the analysis and interpretation of moving images.</p>
-                <br>
-                <a href="https://libcal.princeton.edu/event/16042206"><button type="button" class="btn btn-light">Register here</button></a>
-              </div>
-            </div>
-             
-          </div>
-          
-          
         </div>
 
       </div>
 
     </section><!-- End Schedule Section -->
+
+  <!-- ======= Archive Section ======= -->
+  <section id="archive">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header">
+        <h2>Past Sessions</h2>
+        <p>Browse notebooks, slides, and other materials from previous workshops. Each session includes a read-only preview, a one-click link to run the notebook in Google Colab, and a portable version you can run in any Jupyter environment.</p>
+      </div>
+
+      {% if archive and archive.length %}
+        <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-9">
+            {% for session in archive %}
+            <div class="row schedule-item">
+              <div class="col-md-2">
+                <time>{{ session.time }}</time>
+              </div>
+              <div class="col-md-10">
+                <h4>{{ session.title }}</h4>
+                <p>{{ session.description }}</p>
+                {% if session.tags %}
+                <div>
+                  {% for tag in session.tags %}
+                  <span class="archive-tag">{{ tag }}</span>
+                  {% endfor %}
+                </div>
+                {% endif %}
+                <div class="archive-materials">
+                  {% for material in session.materials %}
+                  <a href="{{ material.url }}" target="_blank" rel="noopener">
+                    <button type="button" class="btn btn-outline-secondary btn-sm">
+                      {% if material.icon %}<i class="bi {{ material.icon }}"></i> {% endif %}{{ material.label }}
+                    </button>
+                  </a><br>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% else %}
+        <p class="text-center text-muted">Past session materials will appear here after each workshop.</p>
+      {% endif %}
+
+    </div>
+  </section><!-- End Archive Section -->
 
 <section id="venue" class="venue section">
 

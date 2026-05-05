@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:notebooks": "python scripts/build_notebooks.py",
+    "build": "npm run build:notebooks && npx @11ty/eleventy",
+    "start": "npm run build:notebooks && npx @11ty/eleventy --serve"
   },
   "keywords": [],
   "author": "",

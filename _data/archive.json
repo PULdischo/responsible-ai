@@ -1,0 +1,78 @@
+[
+  {
+    "title": "Multimodal AI — Video and temporal understanding",
+    "date": "2026-04-15",
+    "time": "April 15, 2026, 3–4 pm",
+    "location": "Commons Library Classroom (D112)",
+    "description": "Vision-language models can process video and image series, grounding their responses in time to indicate when particular events or shifts occur in a film. This session explored the use of vision-language models for the analysis and interpretation of moving images.",
+    "tags": ["vision", "video", "multimodal"],
+    "materials": [
+      { "label": "Preview", "url": "/assets/notebooks/html/video_understanding_qwen_vl.html", "icon": "bi-eye" },
+      { "label": "Open in Colab", "url": "https://colab.research.google.com/github/PULdischo/responsible-ai/blob/main/notebooks/video_understanding_qwen_vl.ipynb", "icon": "bi-google" },
+      { "label": "Download Notebook", "url": "/notebooks/run-anywhere/video_understanding_qwen_vl.ipynb", "icon": "bi-download" }
+    ]
+  },
+  {
+    "title": "AI for humanities research?",
+    "date": "2026-04-08",
+    "time": "April 8, 2026, 12 pm",
+    "location": "Center for Digital Humanities (B Floor)",
+    "description": "A collaborative session exploring how large language models and vision-language tools can support humanities scholarship — from working with archival image collections via IIIF to contextual analysis of primary sources.",
+    "tags": ["humanities", "archives", "vision"],
+    "materials": [
+
+    ]
+  },
+  {
+    "title": "DiScho Discovery Hours — Translating secondary sources",
+    "date": "2026-03-04",
+    "time": "March 4, 2026, 3–4 pm",
+    "location": "Commons Library Curiosity Studio",
+    "description": "Three practical approaches to translating scholarly texts: quick paragraph-level translation via Google Translate / DeepL, offline reproducible translation with MarianMT, and context-aware scholarly translation with an LLM. Attendees compared outputs on the same passage.",
+    "tags": ["translation", "text", "humanities"],
+    "materials": [
+      { "label": "Preview", "url": "/assets/notebooks/html/translation_workshop.html", "icon": "bi-eye" },
+      { "label": "Open in Colab", "url": "https://colab.research.google.com/github/PULdischo/responsible-ai/blob/main/notebooks/translation_workshop.ipynb", "icon": "bi-google" },
+      { "label": "Download Notebook", "url": "/notebooks/run-anywhere/translation_workshop.ipynb", "icon": "bi-download" }
+    ]
+  },
+  {
+    "title": "Multimodal AI — Visual tool calling",
+    "date": "2026-02-25",
+    "time": "February 25, 2026, 3–4 pm",
+    "location": "Commons Library Classroom (D112)",
+    "description": "Multimodal AI models can include visual tools that enable them to manipulate images or retrieve external information. A zoom tool can focus on a section of a painting; reverse image search retrieves metadata. We also built a custom image restoration tool and covered practical document-to-text workflows.",
+    "tags": ["vision", "tools", "multimodal"],
+    "materials": [
+      { "label": "Preview: Visual Tool Calling", "url": "/assets/notebooks/html/Visual_Tool_Calling.html", "icon": "bi-eye" },
+      { "label": "Open in Colab", "url": "https://colab.research.google.com/github/PULdischo/responsible-ai/blob/main/notebooks/Visual_Tool_Calling.ipynb", "icon": "bi-google" },
+      { "label": "Download Notebook", "url": "/notebooks/run-anywhere/Visual_Tool_Calling.ipynb", "icon": "bi-download" }
+    ]
+  },
+  {
+    "title": "DiScho Discovery Hours — LLM Steering",
+    "date": "2026-02-18",
+    "time": "February 18, 2026, 3–4 pm",
+    "location": "Commons Library Curiosity Studio",
+    "description": "An exploration of LLM activation steering — adding abstract concept vectors to a model's hidden state to alter its output. We tinkered with the technique using nnsight and sparse autoencoders, and discussed what it reveals about how models represent concepts internally.",
+    "tags": ["steering", "interpretability", "llm"],
+    "materials": [
+      { "label": "Preview", "url": "/assets/notebooks/html/discovery_steering.html", "icon": "bi-eye" },
+      { "label": "Open in Colab", "url": "https://colab.research.google.com/github/PULdischo/responsible-ai/blob/main/notebooks/discovery_steering.ipynb", "icon": "bi-google" },
+      { "label": "Download Notebook", "url": "/notebooks/run-anywhere/discovery_steering.ipynb", "icon": "bi-download" }
+    ]
+  },
+  {
+    "title": "Multimodal AI — Visual reasoning and chain of thought",
+    "date": "2026-01-28",
+    "time": "January 28, 2026, 3–4 pm",
+    "location": "Commons Library Classroom (D112)",
+    "description": "Recent models can reason about the visual contents of images, \"thinking aloud\" about meaning and relationships between objects. This capability enables more effective recognition of signs and contextual information within images. We explored how this might further visual analysis, interpretation, and distant viewing.",
+    "tags": ["vision", "reasoning", "multimodal"],
+    "materials": [
+      { "label": "Preview", "url": "/assets/notebooks/html/Visual_Reasoning.html", "icon": "bi-eye" },
+      { "label": "Open in Colab", "url": "https://colab.research.google.com/github/PULdischo/responsible-ai/blob/main/notebooks/Visual_Reasoning.ipynb", "icon": "bi-google" },
+      { "label": "Download Notebook", "url": "/notebooks/run-anywhere/Visual_Reasoning.ipynb", "icon": "bi-download" }
+    ]
+  }
+]

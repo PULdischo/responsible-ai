@@ -1,0 +1,13 @@
+# Eleventy build output
+_site/
+
+# Node
+node_modules/
+package-lock.json
+
+# Temp files created by build_notebooks.py
+.tmp_notebooks/
+
+# OS / editor
+.DS_Store
+*.swp
