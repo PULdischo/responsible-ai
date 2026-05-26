@@ -7697,7 +7697,7 @@ datasets 4.0.0 requires fsspec[http]&lt;=2025.3.0,&gt;=2023.1.0, but you have fs
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">nnsight</span> <span class="kn">import</span> <span class="n">LanguageModel</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">nnsight</span><span class="w"> </span><span class="kn">import</span> <span class="n">LanguageModel</span>
 
 <span class="n">model</span> <span class="o">=</span> <span class="n">LanguageModel</span><span class="p">(</span><span class="s1">'openai-community/gpt2'</span><span class="p">,</span> <span class="n">device_map</span><span class="o">=</span><span class="s1">'auto'</span><span class="p">,</span> <span class="n">dispatch</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
@@ -7743,7 +7743,7 @@ Head dimension: 64
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">nnsight</span> <span class="kn">import</span> <span class="n">LanguageModel</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">nnsight</span><span class="w"> </span><span class="kn">import</span> <span class="n">LanguageModel</span>
 
 <span class="k">with</span> <span class="n">model</span><span class="o">.</span><span class="n">trace</span><span class="p">(</span><span class="s1">'The Eiffel Tower is in the city of'</span><span class="p">):</span>
     <span class="c1"># Intervene on activations (must access in execution order!)</span>
@@ -7810,8 +7810,8 @@ Head dimension: 64
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">import</span> <span class="nn">requests</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
 
 <span class="c1"># prompt and model</span>
 <span class="n">PROMPT</span> <span class="o">=</span> <span class="s2">"The most iconic structure on Earth is"</span>
@@ -7884,8 +7884,8 @@ Head dimension: 64
 <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">neuronpedia</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">available</span><span class="o">-</span><span class="n">resources</span>
 
 
-<span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
 
 <span class="c1"># prompt and model</span>
 <span class="n">PROMPT</span> <span class="o">=</span> <span class="s2">"The best place in the world is "</span>
@@ -7947,8 +7947,8 @@ Head dimension: 64
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">sae_lens</span> <span class="kn">import</span> <span class="n">SAE</span>
-<span class="kn">import</span> <span class="nn">torch</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sae_lens</span><span class="w"> </span><span class="kn">import</span> <span class="n">SAE</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">torch</span>
 
 <span class="c1"># https://www.neuronpedia.org/gpt2-small/1-res-jb/14216</span>
 
@@ -8033,7 +8033,7 @@ model = HookedSAETransformer.from_pretrained_no_processing(..., **cfg.model_from
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">nnsight</span> <span class="kn">import</span> <span class="n">LanguageModel</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">nnsight</span><span class="w"> </span><span class="kn">import</span> <span class="n">LanguageModel</span>
 
 <span class="c1"># TODO This does not work!</span>
 
@@ -8252,7 +8252,7 @@ model = HookedSAETransformer.from_pretrained_no_processing(..., **cfg.model_from
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">nnsight</span> <span class="kn">import</span> <span class="n">LanguageModel</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">nnsight</span><span class="w"> </span><span class="kn">import</span> <span class="n">LanguageModel</span>
 
 <span class="k">with</span> <span class="n">gemma_model</span><span class="o">.</span><span class="n">trace</span><span class="p">(</span><span class="s2">"I've never been to University"</span><span class="p">):</span>
     <span class="c1"># Intervene on activations (must access in execution order!)</span>
@@ -8351,8 +8351,8 @@ RuntimeError: The size of tensor a (768) must match the size of tensor b (2304) 
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span> <span class="k">as</span> <span class="nn">t</span>
-<span class="kn">from</span> <span class="nn">nnsight</span> <span class="kn">import</span> <span class="n">CONFIG</span><span class="p">,</span> <span class="n">LanguageModel</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">t</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nnsight</span><span class="w"> </span><span class="kn">import</span> <span class="n">CONFIG</span><span class="p">,</span> <span class="n">LanguageModel</span>
 
 <span class="n">gpt2_xl</span> <span class="o">=</span> <span class="n">LanguageModel</span><span class="p">(</span><span class="s2">"gpt2-xl"</span><span class="p">,</span> <span class="n">device_map</span><span class="o">=</span><span class="s2">"auto"</span><span class="p">,</span> <span class="n">torch_dtype</span><span class="o">=</span><span class="n">t</span><span class="o">.</span><span class="n">bfloat16</span><span class="p">)</span>
 <span class="n">tokenizer</span> <span class="o">=</span> <span class="n">gpt2_xl</span><span class="o">.</span><span class="n">tokenizer</span>
@@ -8421,7 +8421,7 @@ RuntimeError: The size of tensor a (768) must match the size of tensor b (2304) 
 <span class="p">}</span>
 
 
-<span class="k">def</span> <span class="nf">calculate_and_apply_steering_vector</span><span class="p">(</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">calculate_and_apply_steering_vector</span><span class="p">(</span>
     <span class="n">model</span><span class="p">:</span> <span class="n">LanguageModel</span><span class="p">,</span>
     <span class="n">prompt</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
     <span class="n">activation_additions</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">str</span><span class="p">]],</span>
@@ -8515,7 +8515,7 @@ RuntimeError: The size of tensor a (768) must match the size of tensor b (2304) 
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">rich.table</span> <span class="kn">import</span> <span class="n">Table</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">rich.table</span><span class="w"> </span><span class="kn">import</span> <span class="n">Table</span>
 
 <span class="n">unsteered_completions</span><span class="p">,</span> <span class="n">steered_completions</span> <span class="o">=</span> <span class="n">calculate_and_apply_steering_vector</span><span class="p">(</span>
     <span class="n">gpt2_xl</span><span class="p">,</span>

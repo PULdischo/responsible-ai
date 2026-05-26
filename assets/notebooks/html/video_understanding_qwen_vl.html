@@ -7712,9 +7712,9 @@ Compression ratio: 15×
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Demonstration: Uniform temporal sampling</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">matplotlib.patches</span> <span class="k">as</span> <span class="nn">mpatches</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.patches</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">mpatches</span>
 
 <span class="c1"># Simulate a 30-second video at 30fps</span>
 <span class="n">original_fps</span> <span class="o">=</span> <span class="mi">30</span>
@@ -7776,7 +7776,8 @@ Sports highlights (fast action):    Sample at 4 fps   → 240 frames/minute
 Surveillance footage (mixed):       Sample at 1 fps   → 60 frames/minute
 </code></pre>
 <h3 id="3.3-Token-Budget-Management">3.3 Token Budget Management<a class="anchor-link" href="#3.3-Token-Budget-Management">¶</a></h3><p>To balance quality and compute, Qwen2-VL limits the <strong>total visual tokens per video to 16,384</strong> during training. With dynamic resolution, each frame can produce a variable number of tokens, so:</p>
-$$\text{tokens\_per\_video} = \sum_{i=1}^{N_{\text{frames}}} \text{tokens}(\text{frame}_i) \leq 16384$$<p>The resolution of each frame is dynamically adjusted to stay within budget:</p>
+<p>$$\text{tokens\_per\_video} = \sum_{i=1}^{N_{\text{frames}}} \text{tokens}(\text{frame}_i) \leq 16384$$</p>
+<p>The resolution of each frame is dynamically adjusted to stay within budget:</p>
 <ul>
 <li>More frames → lower resolution per frame</li>
 <li>Fewer frames → higher resolution per frame</li>
@@ -7795,7 +7796,7 @@ $$\text{tokens\_per\_video} = \sum_{i=1}^{N_{\text{frames}}} \text{tokens}(\text
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Demonstration: Token budget allocation across frames</span>
 
-<span class="k">def</span> <span class="nf">compute_frame_tokens</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">patch_size</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">merge_factor</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">compute_frame_tokens</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">width</span><span class="p">,</span> <span class="n">patch_size</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">merge_factor</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Compute visual tokens for a single frame after ViT + 2x2 merging."""</span>
     <span class="n">h_patches</span> <span class="o">=</span> <span class="n">height</span> <span class="o">//</span> <span class="n">patch_size</span>
     <span class="n">w_patches</span> <span class="o">=</span> <span class="n">width</span> <span class="o">//</span> <span class="n">patch_size</span>
@@ -7892,7 +7893,7 @@ $$\text{tokens\_per\_video} = \sum_{i=1}^{N_{\text{frames}}} \text{tokens}(\text
 <span class="c1"># --- Step 1: smart_nframes() — decides HOW MANY frames to sample ---</span>
 <span class="c1"># This is the core function that computes the target number of frames.</span>
 
-<span class="k">def</span> <span class="nf">smart_nframes</span><span class="p">(</span><span class="n">ele</span><span class="p">,</span> <span class="n">total_frames</span><span class="p">,</span> <span class="n">video_fps</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">smart_nframes</span><span class="p">(</span><span class="n">ele</span><span class="p">,</span> <span class="n">total_frames</span><span class="p">,</span> <span class="n">video_fps</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Calculate the number of frames for video used for model inputs.</span>
 
 <span class="sd">    Args:</span>
@@ -7926,9 +7927,9 @@ $$\text{tokens\_per\_video} = \sum_{i=1}^{N_{\text{frames}}} \text{tokens}(\text
 <span class="c1"># --- Step 2: The video reader selects WHICH frames via linspace ---</span>
 <span class="c1"># All three backends (decord, torchvision, torchcodec) use the same pattern:</span>
 
-<span class="k">def</span> <span class="nf">_read_video_decord_simplified</span><span class="p">(</span><span class="n">ele</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">_read_video_decord_simplified</span><span class="p">(</span><span class="n">ele</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Simplified version of _read_video_decord showing the frame selection logic."""</span>
-    <span class="kn">import</span> <span class="nn">decord</span>
+    <span class="kn">import</span><span class="w"> </span><span class="nn">decord</span>
     <span class="n">vr</span> <span class="o">=</span> <span class="n">decord</span><span class="o">.</span><span class="n">VideoReader</span><span class="p">(</span><span class="n">ele</span><span class="p">[</span><span class="s2">"video"</span><span class="p">])</span>
     <span class="n">total_frames</span><span class="p">,</span> <span class="n">video_fps</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">vr</span><span class="p">),</span> <span class="n">vr</span><span class="o">.</span><span class="n">get_avg_fps</span><span class="p">()</span>
 
@@ -7979,7 +7980,7 @@ $$\text{tokens\_per\_video} = \sum_{i=1}^{N_{\text{frames}}} \text{tokens}(\text
 <span class="c1"># After frames are selected, fetch_video() enforces the token budget by</span>
 <span class="c1"># adjusting the spatial resolution of each frame.</span>
 
-<span class="k">def</span> <span class="nf">fetch_video_simplified</span><span class="p">(</span><span class="n">ele</span><span class="p">,</span> <span class="n">image_patch_size</span><span class="o">=</span><span class="mi">14</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">fetch_video_simplified</span><span class="p">(</span><span class="n">ele</span><span class="p">,</span> <span class="n">image_patch_size</span><span class="o">=</span><span class="mi">14</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Simplified fetch_video showing the token budget enforcement logic."""</span>
 
     <span class="n">image_factor</span> <span class="o">=</span> <span class="n">image_patch_size</span> <span class="o">*</span> <span class="n">SPATIAL_MERGE_SIZE</span>      <span class="c1"># 14 * 2 = 28 (or 16 * 2 = 32 for Qwen3-VL)</span>
@@ -8086,7 +8087,8 @@ Frame t+1 : [patch_1, patch_2, ..., patch_N]    ─┘
 After merging:   8 ×  8 =  64 tokens per frame
 </code></pre>
 <p>Combined with the 3D temporal merging, the total compression from raw frames to visual tokens is substantial:</p>
-$$\text{Compression} = \underbrace{2\times}_\text{3D temporal} \times \underbrace{4\times}_\text{2×2 spatial} = 8\times$$<h3 id="4.4-Dynamic-Resolution">4.4 Dynamic Resolution<a class="anchor-link" href="#4.4-Dynamic-Resolution">¶</a></h3><p>Unlike fixed-resolution models, Qwen-VL processes images at their <strong>native resolution</strong> (within configurable min/max bounds). The number of visual tokens scales with image size:</p>
+<p>$$\text{Compression} = \underbrace{2\times}_\text{3D temporal} \times \underbrace{4\times}_\text{2×2 spatial} = 8\times$$</p>
+<h3 id="4.4-Dynamic-Resolution">4.4 Dynamic Resolution<a class="anchor-link" href="#4.4-Dynamic-Resolution">¶</a></h3><p>Unlike fixed-resolution models, Qwen-VL processes images at their <strong>native resolution</strong> (within configurable min/max bounds). The number of visual tokens scales with image size:</p>
 <table>
 <thead>
 <tr>
@@ -8223,7 +8225,8 @@ $$\text{Compression} = \underbrace{2\times}_\text{3D temporal} \times \underbrac
 <li>Flattening these into 1D destroys spatial/temporal relationships</li>
 </ul>
 <h3 id="5.2-M-RoPE:-Decomposing-Position-into-Three-Components">5.2 M-RoPE: Decomposing Position into Three Components<a class="anchor-link" href="#5.2-M-RoPE:-Decomposing-Position-into-Three-Components">¶</a></h3><p>Qwen2-VL introduces <strong>Multimodal Rotary Position Embedding (M-RoPE)</strong>, which decomposes the rotary embedding into <strong>three independent components</strong>:</p>
-$$\text{M-RoPE}(\mathbf{x}, \text{pos}) = \text{RoPE}_t(\mathbf{x}_{[0:d/3]}, t) \circ \text{RoPE}_h(\mathbf{x}_{[d/3:2d/3]}, h) \circ \text{RoPE}_w(\mathbf{x}_{[2d/3:d]}, w)$$<p>Where:</p>
+<p>$$\text{M-RoPE}(\mathbf{x}, \text{pos}) = \text{RoPE}_t(\mathbf{x}_{[0:d/3]}, t) \circ \text{RoPE}_h(\mathbf{x}_{[d/3:2d/3]}, h) \circ \text{RoPE}_w(\mathbf{x}_{[2d/3:d]}, w)$$</p>
+<p>Where:</p>
 <ul>
 <li>$t$ = <strong>temporal</strong> position ID</li>
 <li>$h$ = <strong>height</strong> position ID</li>
@@ -8233,9 +8236,12 @@ $$\text{M-RoPE}(\mathbf{x}, \text{pos}) = \text{RoPE}_t(\mathbf{x}_{[0:d/3]}, t)
 <p>The embedding dimension is split into three sections (not necessarily equal — in Qwen2.5-VL the split is <code>[16, 24, 24]</code>, in Qwen3-VL it's <code>[24, 20, 20]</code>), and each section gets its own rotary encoding.</p>
 <h3 id="5.3-How-Position-IDs-Are-Assigned">5.3 How Position IDs Are Assigned<a class="anchor-link" href="#5.3-How-Position-IDs-Are-Assigned">¶</a></h3><p>The assignment of $(t, h, w)$ position IDs depends on the modality:</p>
 <h4 id="For-Text-tokens:">For <strong>Text</strong> tokens:<a class="anchor-link" href="#For-Text-tokens:">¶</a></h4><p>All three components use the <strong>same</strong> ID, making M-RoPE equivalent to standard 1D-RoPE:</p>
-$$\text{Text token } i: \quad (t_i, h_i, w_i) = (i, i, i)$$<h4 id="For-Image-tokens:">For <strong>Image</strong> tokens:<a class="anchor-link" href="#For-Image-tokens:">¶</a></h4><p>The temporal ID stays <strong>constant</strong> (the image exists at a single point in time), while height and width IDs reflect spatial position:</p>
-$$\text{Image token at row } r, \text{col } c: \quad (t, h, w) = (t_0, r, c)$$<h4 id="For-Video-tokens:">For <strong>Video</strong> tokens:<a class="anchor-link" href="#For-Video-tokens:">¶</a></h4><p>The temporal ID <strong>increments</strong> with each frame, while spatial IDs follow the image pattern:</p>
-$$\text{Video token at frame } f, \text{row } r, \text{col } c: \quad (t, h, w) = (f, r, c)$$<h4 id="Cross-modality-transitions:">Cross-modality transitions:<a class="anchor-link" href="#Cross-modality-transitions:">¶</a></h4><p>When switching between modalities, the position numbering for the new modality starts at <code>max_previous_ID + 1</code>, ensuring monotonic progression.</p>
+<p>$$\text{Text token } i: \quad (t_i, h_i, w_i) = (i, i, i)$$</p>
+<h4 id="For-Image-tokens:">For <strong>Image</strong> tokens:<a class="anchor-link" href="#For-Image-tokens:">¶</a></h4><p>The temporal ID stays <strong>constant</strong> (the image exists at a single point in time), while height and width IDs reflect spatial position:</p>
+<p>$$\text{Image token at row } r, \text{col } c: \quad (t, h, w) = (t_0, r, c)$$</p>
+<h4 id="For-Video-tokens:">For <strong>Video</strong> tokens:<a class="anchor-link" href="#For-Video-tokens:">¶</a></h4><p>The temporal ID <strong>increments</strong> with each frame, while spatial IDs follow the image pattern:</p>
+<p>$$\text{Video token at frame } f, \text{row } r, \text{col } c: \quad (t, h, w) = (f, r, c)$$</p>
+<h4 id="Cross-modality-transitions:">Cross-modality transitions:<a class="anchor-link" href="#Cross-modality-transitions:">¶</a></h4><p>When switching between modalities, the position numbering for the new modality starts at <code>max_previous_ID + 1</code>, ensuring monotonic progression.</p>
 </div>
 </div>
 </div>
@@ -8348,7 +8354,7 @@ $$\text{Video token at frame } f, \text{row } r, \text{col } c: \quad (t, h, w) 
 <span class="n">axes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">'M-RoPE Position ID Assignment Across Modalities'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">'bold'</span><span class="p">)</span>
 
 <span class="c1"># Add legend</span>
-<span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">Patch</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.patches</span><span class="w"> </span><span class="kn">import</span> <span class="n">Patch</span>
 <span class="n">legend_elements</span> <span class="o">=</span> <span class="p">[</span>
     <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">'#f0f0f0'</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'gray'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Text'</span><span class="p">),</span>
     <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">'#d5e8d4'</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">'gray'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Image'</span><span class="p">),</span>
@@ -8702,7 +8708,7 @@ Interleaved with text tokens → LLM backbone
 <span class="c1"># https://github.com/QwenLM/Qwen3-VL/tree/main/qwen-vl-finetune/qwenvl/data/rope2d.py</span>
 <span class="c1"># ============================================================================</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="c1"># --- Qwen2.5-VL: get_rope_index_25() —— Absolute Time Encoding ---</span>
 <span class="c1">#</span>
@@ -8734,7 +8740,7 @@ Interleaved with text tokens → LLM backbone
 <span class="c1"># Here is the KEY inner loop from get_rope_index_25 (simplified, using numpy):</span>
 <span class="c1"># Original source uses torch — we replicate the logic with numpy for illustration.</span>
 
-<span class="k">def</span> <span class="nf">compute_video_position_ids_25</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">second_per_grid_ts</span><span class="p">,</span> <span class="n">spatial_merge_size</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">compute_video_position_ids_25</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">h</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">second_per_grid_ts</span><span class="p">,</span> <span class="n">spatial_merge_size</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Compute M-RoPE position IDs for a single video in Qwen2.5-VL style.</span>
 
@@ -8840,7 +8846,7 @@ Interleaved with text tokens → LLM backbone
 <span class="c1"># - The model learns temporal relationships from the timestamp values</span>
 <span class="c1"># - It's more flexible: frame spacing can be irregular</span>
 
-<span class="k">def</span> <span class="nf">visualize_qwen3_position_ids</span><span class="p">(</span><span class="n">n_frames</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">w</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">timestamp_tokens</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">visualize_qwen3_position_ids</span><span class="p">(</span><span class="n">n_frames</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">w</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">timestamp_tokens</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Simulate the M-RoPE position IDs that get_rope_index_3() would produce</span>
 <span class="sd">    for a short video with n_frames, each having h×w spatial tokens, and</span>
@@ -8934,8 +8940,8 @@ Interleaved with text tokens → LLM backbone
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Visual comparison: Qwen2.5-VL vs Qwen3-VL temporal position ID patterns</span>
 
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="n">fig</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 
@@ -9181,7 +9187,7 @@ Interleaved with text tokens → LLM backbone
     <span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">score</span> <span class="o">+</span> <span class="mf">0.02</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="sa">f</span><span class="s1">'</span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">score</span><span class="si">:</span><span class="s1">.0%</span><span class="si">}</span><span class="s1">'</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">'center'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">'bold'</span><span class="p">)</span>
 
 <span class="c1"># Legend</span>
-<span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">Patch</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.patches</span><span class="w"> </span><span class="kn">import</span> <span class="n">Patch</span>
 <span class="n">legend_elements</span> <span class="o">=</span> <span class="p">[</span>
     <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">'#2ecc71'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Strong performance'</span><span class="p">),</span>
     <span class="n">Patch</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">'#f39c12'</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">'Improving / Mixed'</span><span class="p">),</span>
@@ -9217,7 +9223,8 @@ Interleaved with text tokens → LLM backbone
 </ul>
 <p>Even with dynamic FPS, the model cannot recover information from frames that were never sampled.</p>
 <h3 id="8.2-%F0%9F%94%B4-Quadratic-Attention-Scaling">8.2 🔴 Quadratic Attention Scaling<a class="anchor-link" href="#8.2-%F0%9F%94%B4-Quadratic-Attention-Scaling">¶</a></h3><p>Transformer self-attention scales as $O(n^2)$ with sequence length. For video:</p>
-$$\text{Attention cost} \propto (N_\text{text} + N_\text{visual})^2$$<p>A 1-minute video at 2fps with 448×448 frames generates:
+<p>$$\text{Attention cost} \propto (N_\text{text} + N_\text{visual})^2$$</p>
+<p>A 1-minute video at 2fps with 448×448 frames generates:
 $$120 \text{ frames} \times 256 \text{ tokens/frame} / 2 \text{ (3D conv)} = 15,360 \text{ visual tokens}$$</p>
 <p>This creates severe compute and memory pressure, especially for longer videos. Window attention (Qwen2.5-VL) and Interleaved-MRoPE (Qwen3-VL) partially address this, but it remains a core constraint.</p>
 <h3 id="8.3-%F0%9F%94%B4-Temporal-Reasoning-Is-Shallow">8.3 🔴 Temporal Reasoning Is Shallow<a class="anchor-link" href="#8.3-%F0%9F%94%B4-Temporal-Reasoning-Is-Shallow">¶</a></h3><p>Current VLMs struggle with:</p>

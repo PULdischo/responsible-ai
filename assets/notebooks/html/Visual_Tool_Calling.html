@@ -7545,11 +7545,11 @@ Alternatively, set the variables in your shell environment before launching Jupy
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
 <span class="c1"># Load API keys from a .env file if present (install with: pip install python-dotenv)</span>
 <span class="k">try</span><span class="p">:</span>
-    <span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">dotenv</span><span class="w"> </span><span class="kn">import</span> <span class="n">load_dotenv</span>
     <span class="n">load_dotenv</span><span class="p">()</span>
 <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
     <span class="k">pass</span>  <span class="c1"># No .env file support — set keys as environment variables instead</span>
@@ -7634,10 +7634,10 @@ Alternatively, set the variables in your shell environment before launching Jupy
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span><span class="p">,</span> <span class="n">display</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">Markdown</span><span class="p">,</span> <span class="n">display</span>
 
-<span class="kn">import</span> <span class="nn">dashscope</span>
-<span class="kn">from</span> <span class="nn">dashscope</span> <span class="kn">import</span> <span class="n">MultiModalConversation</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">dashscope</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">dashscope</span><span class="w"> </span><span class="kn">import</span> <span class="n">MultiModalConversation</span>
 
 <span class="n">api_key</span> <span class="o">=</span> <span class="n">DASHSCOPE_API_KEY</span>  <span class="c1"># set in the setup cell above</span>
 
@@ -7745,16 +7745,16 @@ Alternatively, set the variables in your shell environment before launching Jupy
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 
 <span class="n">serp_api_key</span> <span class="o">=</span> <span class="n">SERPAPI_IMAGE_SEARCH_KEY</span>  <span class="c1"># set in the setup cell above</span>
 <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">"SERPAPI_IMAGE_SEARCH_KEY"</span><span class="p">]</span> <span class="o">=</span> <span class="n">serp_api_key</span>
 
-<span class="kn">import</span> <span class="nn">qwen_agent.tools.image_search</span> <span class="k">as</span> <span class="nn">img_search_module</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">qwen_agent.tools.image_search</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">img_search_module</span>
 <span class="n">img_search_module</span><span class="o">.</span><span class="n">SERPAPI_IMAGE_SEARCH_KEY</span> <span class="o">=</span> <span class="n">serp_api_key</span>
 
-<span class="kn">from</span> <span class="nn">qwen_agent.agents</span> <span class="kn">import</span> <span class="n">Assistant</span>
-<span class="kn">from</span> <span class="nn">qwen_agent.utils.output_beautify</span> <span class="kn">import</span> <span class="n">typewriter_print</span><span class="p">,</span> <span class="n">multimodal_typewriter_print</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qwen_agent.agents</span><span class="w"> </span><span class="kn">import</span> <span class="n">Assistant</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qwen_agent.utils.output_beautify</span><span class="w"> </span><span class="kn">import</span> <span class="n">typewriter_print</span><span class="p">,</span> <span class="n">multimodal_typewriter_print</span>
 </pre></div>
 </div>
 </div>
@@ -7922,7 +7922,7 @@ Alternatively, set the variables in your shell environment before launching Jupy
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
 <span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">'savchenko.jpg'</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -7937,8 +7937,8 @@ Alternatively, set the variables in your shell environment before launching Jupy
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">base64</span>
-<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">base64</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
 
 <span class="c1"># many libraries, archives and museums limit bot traffic. To address this, we'll download the image first and encode as a data url.</span>
 
@@ -7959,8 +7959,8 @@ Alternatively, set the variables in your shell environment before launching Jupy
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">replicate</span>
-<span class="kn">from</span> <span class="nn">replicate.client</span> <span class="kn">import</span> <span class="n">Client</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">replicate</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">replicate.client</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
 
 <span class="n">replicate_client</span> <span class="o">=</span> <span class="n">Client</span><span class="p">(</span>
   <span class="n">api_token</span><span class="o">=</span><span class="n">REPLICATE_API_TOKEN</span><span class="p">,</span>  <span class="c1"># set in the setup cell above</span>
@@ -8003,10 +8003,10 @@ Alternatively, set the variables in your shell environment before launching Jupy
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">io</span><span class="w"> </span><span class="kn">import</span> <span class="n">BytesIO</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span>
 
 <span class="n">image_url</span> <span class="o">=</span> <span class="n">output</span><span class="o">.</span><span class="n">url</span>
 <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">image_url</span><span class="p">)</span>
@@ -8026,20 +8026,20 @@ Alternatively, set the variables in your shell environment before launching Jupy
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">replicate</span>
-<span class="kn">from</span> <span class="nn">replicate.client</span> <span class="kn">import</span> <span class="n">Client</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">replicate</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">replicate.client</span><span class="w"> </span><span class="kn">import</span> <span class="n">Client</span>
 
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">OrderedDict</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Union</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">typing</span><span class="w"> </span><span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">OrderedDict</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Union</span>
 
-<span class="kn">from</span> <span class="nn">qwen_agent.tools.base</span> <span class="kn">import</span> <span class="n">BaseTool</span><span class="p">,</span> <span class="n">register_tool</span>
-<span class="kn">from</span> <span class="nn">qwen_agent.log</span> <span class="kn">import</span> <span class="n">logger</span>
-<span class="kn">from</span> <span class="nn">qwen_agent.llm.schema</span> <span class="kn">import</span> <span class="n">Message</span><span class="p">,</span> <span class="n">ContentItem</span>
-<span class="kn">from</span> <span class="nn">qwen_agent.utils.utils</span> <span class="kn">import</span> <span class="n">extract_images_from_messages</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qwen_agent.tools.base</span><span class="w"> </span><span class="kn">import</span> <span class="n">BaseTool</span><span class="p">,</span> <span class="n">register_tool</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qwen_agent.log</span><span class="w"> </span><span class="kn">import</span> <span class="n">logger</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qwen_agent.llm.schema</span><span class="w"> </span><span class="kn">import</span> <span class="n">Message</span><span class="p">,</span> <span class="n">ContentItem</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qwen_agent.utils.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">extract_images_from_messages</span>
 
 
 
 <span class="nd">@register_tool</span><span class="p">(</span><span class="s1">'restore_image'</span><span class="p">,</span> <span class="n">allow_overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="k">class</span> <span class="nc">ImageRestoration</span><span class="p">(</span><span class="n">BaseTool</span><span class="p">):</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">ImageRestoration</span><span class="p">(</span><span class="n">BaseTool</span><span class="p">):</span>
     <span class="n">name</span> <span class="o">=</span> <span class="s1">'restore_image'</span>
     <span class="n">description</span> <span class="o">=</span> <span class="s1">'Image restoration tool. Input low-resolution or blurry image that needs clarity or restoration.'</span>
     <span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span>
@@ -8053,7 +8053,7 @@ Alternatively, set the variables in your shell environment before launching Jupy
         <span class="s1">'required'</span><span class="p">:</span> <span class="p">[</span><span class="s1">'img_idx'</span><span class="p">]</span>
     <span class="p">}</span>
 
-    <span class="k">def</span> <span class="nf">call</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">call</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">dict</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">params</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_verify_json_format_args</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
         <span class="n">image_id</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">params</span><span class="p">[</span><span class="s1">'img_idx'</span><span class="p">])</span>
         <span class="n">images</span> <span class="o">=</span>  <span class="n">extract_images_from_messages</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'messages'</span><span class="p">,</span> <span class="p">[]))</span>

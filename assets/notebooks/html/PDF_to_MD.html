@@ -7530,7 +7530,7 @@ a.anchor-link {
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># needed to run async in Jupyter</span>
 
-<span class="kn">import</span> <span class="nn">nest_asyncio</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">nest_asyncio</span>
 <span class="n">nest_asyncio</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -7572,9 +7572,9 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">pymupdf</span>
-<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
-<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pymupdf</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tqdm</span><span class="w"> </span><span class="kn">import</span> <span class="n">tqdm</span>
 
 <span class="n">folder_path</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">"/content/"</span><span class="p">)</span>
 
@@ -7645,7 +7645,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">userdata</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">userdata</span>
 
 <span class="c1"># API Configuration</span>
 <span class="n">base_url</span> <span class="o">=</span> <span class="s2">"https://dashscope-intl.aliyuncs.com/compatible-mode/v1"</span>
@@ -7665,10 +7665,10 @@ a.anchor-link {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># @title Image Encoding Function</span>
-<span class="kn">import</span> <span class="nn">base64</span>
-<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">base64</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
 
-<span class="k">def</span> <span class="nf">encode_images</span><span class="p">(</span><span class="n">image_directory</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">file_extensions</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'.jpg'</span><span class="p">,</span> <span class="s1">'.png'</span><span class="p">],</span> <span class="n">data_uri</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">encode_images</span><span class="p">(</span><span class="n">image_directory</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">file_extensions</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'.jpg'</span><span class="p">,</span> <span class="s1">'.png'</span><span class="p">],</span> <span class="n">data_uri</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Lazy generator that encodes images on-demand.</span>
 
 <span class="sd">    Args:</span>
@@ -7706,14 +7706,14 @@ a.anchor-link {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># @title OCR Processing Functions</span>
-<span class="kn">import</span> <span class="nn">asyncio</span>
-<span class="kn">import</span> <span class="nn">aiohttp</span>
-<span class="kn">from</span> <span class="nn">openai</span> <span class="kn">import</span> <span class="n">AsyncOpenAI</span>
-<span class="kn">from</span> <span class="nn">tqdm.asyncio</span> <span class="kn">import</span> <span class="n">tqdm</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">aiohttp</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openai</span><span class="w"> </span><span class="kn">import</span> <span class="n">AsyncOpenAI</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tqdm.asyncio</span><span class="w"> </span><span class="kn">import</span> <span class="n">tqdm</span>
 
 <span class="n">client</span> <span class="o">=</span> <span class="n">AsyncOpenAI</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">)</span>
 
-<span class="k">async</span> <span class="k">def</span> <span class="nf">transcribe_image</span><span class="p">(</span><span class="n">img</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="n">aiohttp</span><span class="o">.</span><span class="n">ClientSession</span><span class="p">,</span> <span class="n">semaphore</span><span class="p">:</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Semaphore</span><span class="p">):</span>
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">transcribe_image</span><span class="p">(</span><span class="n">img</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="n">aiohttp</span><span class="o">.</span><span class="n">ClientSession</span><span class="p">,</span> <span class="n">semaphore</span><span class="p">:</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Semaphore</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Process a single image with rate limiting."""</span>
     <span class="k">async</span> <span class="k">with</span> <span class="n">semaphore</span><span class="p">:</span>
         <span class="n">image_path</span><span class="p">,</span> <span class="n">image_b64</span> <span class="o">=</span> <span class="n">img</span>
@@ -7750,7 +7750,7 @@ a.anchor-link {
             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"❌ Error on </span><span class="si">{</span><span class="n">image_path</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
             <span class="k">return</span> <span class="kc">None</span>
 
-<span class="k">async</span> <span class="k">def</span> <span class="nf">transcribe_all_images</span><span class="p">(</span><span class="n">images</span><span class="p">,</span> <span class="n">max_concurrent</span><span class="o">=</span><span class="mi">15</span><span class="p">):</span>
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">transcribe_all_images</span><span class="p">(</span><span class="n">images</span><span class="p">,</span> <span class="n">max_concurrent</span><span class="o">=</span><span class="mi">15</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Process all images with concurrency control."""</span>
     <span class="n">connector</span> <span class="o">=</span> <span class="n">aiohttp</span><span class="o">.</span><span class="n">TCPConnector</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">limit_per_host</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
     <span class="n">timeout</span> <span class="o">=</span> <span class="n">aiohttp</span><span class="o">.</span><span class="n">ClientTimeout</span><span class="p">(</span><span class="n">total</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
@@ -7786,18 +7786,18 @@ a.anchor-link {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># @title Clean text helper functions</span>
-<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
 
-<span class="k">def</span> <span class="nf">remove_code_tags</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">remove_code_tags</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Remove markdown code fences."""</span>
     <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">"```[a-zA-Z]*\n(.*?)\n```"</span><span class="p">,</span> <span class="sa">r</span><span class="s2">"\1"</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">DOTALL</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">remove_repeated_phrases</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">remove_repeated_phrases</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Remove consecutive repeated phrases."""</span>
     <span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">"(\b\w+(?: \w+){0,5}\b)( \1)+"</span>
     <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="sa">r</span><span class="s2">"\1"</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">clean_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">clean_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Clean extracted text."""</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">remove_code_tags</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">remove_repeated_phrases</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
@@ -7825,7 +7825,7 @@ a.anchor-link {
 <span class="n">results</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">transcribe_all_images</span><span class="p">(</span><span class="n">images_gen</span><span class="p">,</span> <span class="n">max_concurrent</span><span class="o">=</span><span class="mi">15</span><span class="p">))</span>
 
 <span class="c1"># Step 3: Clean the text</span>
-<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tqdm</span><span class="w"> </span><span class="kn">import</span> <span class="n">tqdm</span>
 <span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">desc</span><span class="o">=</span><span class="s2">"Cleaning text"</span><span class="p">):</span>
     <span class="n">result</span><span class="p">[</span><span class="s2">"text"</span><span class="p">]</span> <span class="o">=</span> <span class="n">clean_text</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s2">"text"</span><span class="p">])</span>
 
@@ -7880,8 +7880,8 @@ Cleaning text: 100%|██████████| 316/316 [00:00&lt;00:00, 272
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># Save results</span>
-<span class="kn">import</span> <span class="nn">json</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
 <span class="c1"># Save as JSON</span>
 <span class="n">output_json</span> <span class="o">=</span> <span class="n">folder_path</span> <span class="o">/</span> <span class="s2">"ocr_results.json"</span>
@@ -7950,7 +7950,7 @@ Cleaning text: 100%|██████████| 316/316 [00:00&lt;00:00, 272
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">files</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">files</span>
 
 <span class="n">txt_files</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">folder_path</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="s2">"**/*.md"</span><span class="p">))</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Found </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">txt_files</span><span class="p">)</span><span class="si">}</span><span class="s2"> markdown files"</span><span class="p">)</span>
@@ -7974,9 +7974,9 @@ Cleaning text: 100%|██████████| 316/316 [00:00&lt;00:00, 272
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedJavaScript jp-OutputArea-output" data-mime-type="application/javascript" id="1c3a2d5b-9b20-447e-9c72-ef5ff89e31dd" tabindex="0">
+<div class="jp-RenderedJavaScript jp-OutputArea-output" data-mime-type="application/javascript" id="100388f8-8369-44e2-a0c4-73b07f19b477" tabindex="0">
 <script type="text/javascript">
-var element = document.getElementById('1c3a2d5b-9b20-447e-9c72-ef5ff89e31dd');
+var element = document.getElementById('100388f8-8369-44e2-a0c4-73b07f19b477');
 
     async function download(id, filename, size) {
       if (!google.colab.kernel.accessAllowed) {
@@ -8023,18 +8023,18 @@ var element = document.getElementById('1c3a2d5b-9b20-447e-9c72-ef5ff89e31dd');
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedJavaScript jp-OutputArea-output" data-mime-type="application/javascript" id="61cf71fb-64e6-484b-8c60-5e5c4abde6a3" tabindex="0">
+<div class="jp-RenderedJavaScript jp-OutputArea-output" data-mime-type="application/javascript" id="d3f29c58-3fc8-4b75-888a-785c521b629b" tabindex="0">
 <script type="text/javascript">
-var element = document.getElementById('61cf71fb-64e6-484b-8c60-5e5c4abde6a3');
+var element = document.getElementById('d3f29c58-3fc8-4b75-888a-785c521b629b');
 download("download_6df77bc2-4465-4584-9f9a-554f072e3193", "Woolf_To-the_Lighthouse.md", 400359)
 </script>
 </div>
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedJavaScript jp-OutputArea-output" data-mime-type="application/javascript" id="56d981e8-0dd7-4074-a42c-c15f5f2227ce" tabindex="0">
+<div class="jp-RenderedJavaScript jp-OutputArea-output" data-mime-type="application/javascript" id="b0520645-ac33-4f86-9907-d48f86efd13a" tabindex="0">
 <script type="text/javascript">
-var element = document.getElementById('56d981e8-0dd7-4074-a42c-c15f5f2227ce');
+var element = document.getElementById('b0520645-ac33-4f86-9907-d48f86efd13a');
 
     async function download(id, filename, size) {
       if (!google.colab.kernel.accessAllowed) {
@@ -8081,9 +8081,9 @@ var element = document.getElementById('56d981e8-0dd7-4074-a42c-c15f5f2227ce');
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedJavaScript jp-OutputArea-output" data-mime-type="application/javascript" id="fc1432b6-e027-4b73-9ca7-92f01ad315eb" tabindex="0">
+<div class="jp-RenderedJavaScript jp-OutputArea-output" data-mime-type="application/javascript" id="6031cc85-ad9d-4239-85dc-05bf3e50437a" tabindex="0">
 <script type="text/javascript">
-var element = document.getElementById('fc1432b6-e027-4b73-9ca7-92f01ad315eb');
+var element = document.getElementById('6031cc85-ad9d-4239-85dc-05bf3e50437a');
 download("download_cdc49b3d-a4cf-42c6-afcb-55807f3416f4", "README.md", 962)
 </script>
 </div>

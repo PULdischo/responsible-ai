@@ -7529,7 +7529,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">drive</span> <span class="c1">#1</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">drive</span> <span class="c1">#1</span>
 <span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">'/content/drive'</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -7574,7 +7574,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
 <span class="n">drive_folder</span> <span class="o">=</span> <span class="s2">"/content/drive/MyDrive/Sam Parker (1)/CDH "</span>
 
 <span class="k">assert</span> <span class="n">Path</span><span class="p">(</span><span class="n">drive_folder</span><span class="p">)</span><span class="o">.</span><span class="n">exists</span><span class="p">(),</span> <span class="s2">"Invalid drive_folder path, please check and try again"</span>
@@ -7593,7 +7593,7 @@ a.anchor-link {
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># needed to run async in Jupyter</span>
 
-<span class="kn">import</span> <span class="nn">nest_asyncio</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">nest_asyncio</span>
 <span class="n">nest_asyncio</span><span class="o">.</span><span class="n">apply</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -7646,10 +7646,10 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
-<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
-<span class="kn">from</span> <span class="nn">tqdm.notebook</span> <span class="kn">import</span> <span class="n">tqdm</span>
-<span class="kn">from</span> <span class="nn">pillow_heif</span> <span class="kn">import</span> <span class="n">register_heif_opener</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tqdm.notebook</span><span class="w"> </span><span class="kn">import</span> <span class="n">tqdm</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pillow_heif</span><span class="w"> </span><span class="kn">import</span> <span class="n">register_heif_opener</span>
 
 <span class="c1"># Register the HEIF opener</span>
 <span class="n">register_heif_opener</span><span class="p">()</span>
@@ -7684,7 +7684,7 @@ a.anchor-link {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">userdata</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">userdata</span>
 
 <span class="c1"># API Configuration</span>
 <span class="n">base_url</span> <span class="o">=</span> <span class="s2">"https://dashscope-intl.aliyuncs.com/compatible-mode/v1"</span>
@@ -7704,10 +7704,10 @@ a.anchor-link {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># @title Image Encoding Function</span>
-<span class="kn">import</span> <span class="nn">base64</span>
-<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">base64</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
 
-<span class="k">def</span> <span class="nf">encode_images</span><span class="p">(</span><span class="n">image_directory</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">file_extensions</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'.jpg'</span><span class="p">,</span> <span class="s1">'.png'</span><span class="p">],</span> <span class="n">data_uri</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">encode_images</span><span class="p">(</span><span class="n">image_directory</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">file_extensions</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'.jpg'</span><span class="p">,</span> <span class="s1">'.png'</span><span class="p">],</span> <span class="n">data_uri</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Lazy generator that encodes images on-demand.</span>
 
 <span class="sd">    Args:</span>
@@ -7745,14 +7745,14 @@ a.anchor-link {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># @title OCR Processing Functions</span>
-<span class="kn">import</span> <span class="nn">asyncio</span>
-<span class="kn">import</span> <span class="nn">aiohttp</span>
-<span class="kn">from</span> <span class="nn">openai</span> <span class="kn">import</span> <span class="n">AsyncOpenAI</span>
-<span class="kn">from</span> <span class="nn">tqdm.asyncio</span> <span class="kn">import</span> <span class="n">tqdm</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">aiohttp</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openai</span><span class="w"> </span><span class="kn">import</span> <span class="n">AsyncOpenAI</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tqdm.asyncio</span><span class="w"> </span><span class="kn">import</span> <span class="n">tqdm</span>
 
 <span class="n">client</span> <span class="o">=</span> <span class="n">AsyncOpenAI</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="n">api_key</span><span class="p">,</span> <span class="n">base_url</span><span class="o">=</span><span class="n">base_url</span><span class="p">)</span>
 
-<span class="k">async</span> <span class="k">def</span> <span class="nf">transcribe_image</span><span class="p">(</span><span class="n">img</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="n">aiohttp</span><span class="o">.</span><span class="n">ClientSession</span><span class="p">,</span> <span class="n">semaphore</span><span class="p">:</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Semaphore</span><span class="p">):</span>
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">transcribe_image</span><span class="p">(</span><span class="n">img</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">,</span> <span class="n">session</span><span class="p">:</span> <span class="n">aiohttp</span><span class="o">.</span><span class="n">ClientSession</span><span class="p">,</span> <span class="n">semaphore</span><span class="p">:</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">Semaphore</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Process a single image with rate limiting."""</span>
     <span class="k">async</span> <span class="k">with</span> <span class="n">semaphore</span><span class="p">:</span>
         <span class="n">image_path</span><span class="p">,</span> <span class="n">image_b64</span> <span class="o">=</span> <span class="n">img</span>
@@ -7789,7 +7789,7 @@ a.anchor-link {
             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"❌ Error on </span><span class="si">{</span><span class="n">image_path</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
             <span class="k">return</span> <span class="kc">None</span>
 
-<span class="k">async</span> <span class="k">def</span> <span class="nf">transcribe_all_images</span><span class="p">(</span><span class="n">images</span><span class="p">,</span> <span class="n">max_concurrent</span><span class="o">=</span><span class="mi">15</span><span class="p">):</span>
+<span class="k">async</span> <span class="k">def</span><span class="w"> </span><span class="nf">transcribe_all_images</span><span class="p">(</span><span class="n">images</span><span class="p">,</span> <span class="n">max_concurrent</span><span class="o">=</span><span class="mi">15</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Process all images with concurrency control."""</span>
     <span class="n">connector</span> <span class="o">=</span> <span class="n">aiohttp</span><span class="o">.</span><span class="n">TCPConnector</span><span class="p">(</span><span class="n">limit</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">limit_per_host</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
     <span class="n">timeout</span> <span class="o">=</span> <span class="n">aiohttp</span><span class="o">.</span><span class="n">ClientTimeout</span><span class="p">(</span><span class="n">total</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
@@ -7825,18 +7825,18 @@ a.anchor-link {
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># @title Clean text helper functions</span>
-<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
 
-<span class="k">def</span> <span class="nf">remove_code_tags</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">remove_code_tags</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Remove markdown code fences."""</span>
     <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s2">"```[a-zA-Z]*\n(.*?)\n```"</span><span class="p">,</span> <span class="sa">r</span><span class="s2">"\1"</span><span class="p">,</span> <span class="n">text</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="n">re</span><span class="o">.</span><span class="n">DOTALL</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">remove_repeated_phrases</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">remove_repeated_phrases</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Remove consecutive repeated phrases."""</span>
     <span class="n">pattern</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">"(\b\w+(?: \w+){0,5}\b)( \1)+"</span>
     <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="sa">r</span><span class="s2">"\1"</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">clean_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">clean_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Clean extracted text."""</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">remove_code_tags</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
     <span class="n">text</span> <span class="o">=</span> <span class="n">remove_repeated_phrases</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
@@ -7864,7 +7864,7 @@ a.anchor-link {
 <span class="n">results</span> <span class="o">=</span> <span class="n">asyncio</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">transcribe_all_images</span><span class="p">(</span><span class="n">images_gen</span><span class="p">,</span> <span class="n">max_concurrent</span><span class="o">=</span><span class="mi">15</span><span class="p">))</span>
 
 <span class="c1"># Step 3: Clean the text</span>
-<span class="kn">from</span> <span class="nn">tqdm</span> <span class="kn">import</span> <span class="n">tqdm</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tqdm</span><span class="w"> </span><span class="kn">import</span> <span class="n">tqdm</span>
 <span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">results</span><span class="p">,</span> <span class="n">desc</span><span class="o">=</span><span class="s2">"Cleaning text"</span><span class="p">):</span>
     <span class="n">result</span><span class="p">[</span><span class="s2">"text"</span><span class="p">]</span> <span class="o">=</span> <span class="n">clean_text</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="s2">"text"</span><span class="p">])</span>
 
@@ -7919,7 +7919,7 @@ Cleaning text: 0it [00:00, ?it/s]</pre>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1">#result.text to pd dataframe</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>

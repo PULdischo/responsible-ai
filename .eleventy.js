@@ -30,4 +30,6 @@ module.exports = function(eleventyConfig) {
     // Exclude exported notebook HTML from template processing
     // (these files contain {{ }} syntax from notebook code cells)
     eleventyConfig.ignores.add("assets/notebooks/**");
+    // Exclude generated distribution artifacts from template processing.
+    eleventyConfig.ignores.add("dist/**");
   };

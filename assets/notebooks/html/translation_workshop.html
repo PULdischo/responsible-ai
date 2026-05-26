@@ -7680,9 +7680,9 @@ unterworfen gewesen ist.
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">deep_translator</span> <span class="kn">import</span> <span class="n">GoogleTranslator</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">deep_translator</span><span class="w"> </span><span class="kn">import</span> <span class="n">GoogleTranslator</span>
 
-<span class="k">def</span> <span class="nf">translate_google</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s2">"de"</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s2">"en"</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">translate_google</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s2">"de"</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s2">"en"</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Translate text using Google Translate (free, no API key required).</span>
 <span class="sd">    Handles the 5000-character limit by chunking automatically.</span>
@@ -7752,7 +7752,7 @@ has been subjected.
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">deep_translator</span> <span class="kn">import</span> <span class="n">GoogleTranslator</span><span class="p">,</span> <span class="n">MyMemoryTranslator</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">deep_translator</span><span class="w"> </span><span class="kn">import</span> <span class="n">GoogleTranslator</span><span class="p">,</span> <span class="n">MyMemoryTranslator</span>
 
 <span class="c1"># MyMemory uses locale-style codes (e.g. "de-DE") rather than bare ISO codes.</span>
 <span class="c1"># This mapping covers common research languages; add yours if needed.</span>
@@ -7859,9 +7859,9 @@ has been subjected to.
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">transformers</span> <span class="kn">import</span> <span class="n">MarianMTModel</span><span class="p">,</span> <span class="n">MarianTokenizer</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">transformers</span><span class="w"> </span><span class="kn">import</span> <span class="n">MarianMTModel</span><span class="p">,</span> <span class="n">MarianTokenizer</span>
 
-<span class="k">def</span> <span class="nf">translate_marian</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s2">"de"</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s2">"en"</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">translate_marian</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s2">"de"</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s2">"en"</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Translate using Helsinki-NLP's MarianMT models (runs locally).</span>
 <span class="sd">    The model is downloaded once and cached.</span>
@@ -8004,9 +8004,9 @@ One thing still stands out in the most complete reproduction: the here and now o
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">huggingface_hub</span> <span class="kn">import</span> <span class="n">list_models</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">huggingface_hub</span><span class="w"> </span><span class="kn">import</span> <span class="n">list_models</span>
 
-<span class="k">def</span> <span class="nf">find_translation_models</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="s2">"de"</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s2">"en"</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">find_translation_models</span><span class="p">(</span><span class="n">source</span><span class="o">=</span><span class="s2">"de"</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s2">"en"</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Search Hugging Face for available translation models for a language pair."""</span>
     <span class="n">search_term</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"opus-mt-</span><span class="si">{</span><span class="n">source</span><span class="si">}</span><span class="s2">-</span><span class="si">{</span><span class="n">target</span><span class="si">}</span><span class="s2">"</span>
     <span class="n">models</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">list_models</span><span class="p">(</span><span class="n">search</span><span class="o">=</span><span class="n">search_term</span><span class="p">,</span> <span class="n">author</span><span class="o">=</span><span class="s2">"Helsinki-NLP"</span><span class="p">))</span>
@@ -8127,9 +8127,9 @@ One thing still stands out in the most complete reproduction: the here and now o
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">getpass</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">userdata</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">getpass</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">userdata</span>
 
 <span class="c1"># Get the value of your secret and store it in a Python variable</span>
 
@@ -8160,7 +8160,7 @@ One thing still stands out in the most complete reproduction: the here and now o
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">anthropic</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">anthropic</span>
 
 <span class="n">client</span> <span class="o">=</span> <span class="n">anthropic</span><span class="o">.</span><span class="n">Anthropic</span><span class="p">(</span><span class="n">api_key</span><span class="o">=</span><span class="n">userdata</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'ANTHROPIC_API_KEY'</span><span class="p">))</span>
 
@@ -8174,7 +8174,7 @@ One thing still stands out in the most complete reproduction: the here and now o
 <span class="n">target_name</span> <span class="o">=</span> <span class="n">LANG_NAMES</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">target_lang</span><span class="p">,</span> <span class="n">target_lang</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">llm_translate</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">source_name</span><span class="p">,</span> <span class="n">target_name</span><span class="p">,</span> <span class="n">system_prompt</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s2">"claude-opus-4-6"</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">llm_translate</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">source_name</span><span class="p">,</span> <span class="n">target_name</span><span class="p">,</span> <span class="n">system_prompt</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">model</span><span class="o">=</span><span class="s2">"claude-opus-4-6"</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""Send a translation request to Claude and return the response text."""</span>
     <span class="k">if</span> <span class="n">system_prompt</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">system_prompt</span> <span class="o">=</span> <span class="p">(</span>
@@ -8274,7 +8274,7 @@ Even the most perfect reproduction of a work of art is lacking in one element: i
 <span class="p">)</span>
 
 <span class="c1"># Display with Markdown rendering in Colab</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span><span class="p">,</span> <span class="n">display</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">Markdown</span><span class="p">,</span> <span class="n">display</span>
 <span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="n">annotated_result</span><span class="p">))</span>
 </pre></div>
 </div>
@@ -8440,12 +8440,12 @@ Even the most perfect reproduction of a work of art is lacking in one element: i
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-OutputArea-output" data-mime-type="text/markdown" tabindex="0">
 <h2 id="Original-(German)">Original (German)<a class="anchor-link" href="#Original-(German)">¶</a></h2><blockquote>
-<p>Noch bei der höchstvollendeten Reproduktion fällt eines aus: das Hier</p>
-</blockquote>
-<p>und Jetzt des Kunstwerks – sein einmaliges Dasein an dem Orte, an dem
+<p>Noch bei der höchstvollendeten Reproduktion fällt eines aus: das Hier
+und Jetzt des Kunstwerks – sein einmaliges Dasein an dem Orte, an dem
 es sich befindet. An diesem einmaligen Dasein aber und an nichts sonst
 vollzog sich die Geschichte, der es im Laufe seines Bestehens
 unterworfen gewesen ist.</p>
+</blockquote>
 <hr/>
 <h3 id="Google-Translate-(deep-translator)">Google Translate (<code>deep-translator</code>)<a class="anchor-link" href="#Google-Translate-(deep-translator)">¶</a></h3><p>Even with the most perfect reproduction, one thing is missing: this
 and now of the work of art - its unique existence in the place where
@@ -8480,7 +8480,7 @@ has been subjected.</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="k">def</span> <span class="nf">translate_long_text_google</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s2">"de"</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s2">"en"</span><span class="p">,</span> <span class="n">chunk_size</span><span class="o">=</span><span class="mi">4500</span><span class="p">):</span>
+<div class="highlight hl-python"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">translate_long_text_google</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="s2">"de"</span><span class="p">,</span> <span class="n">target</span><span class="o">=</span><span class="s2">"en"</span><span class="p">,</span> <span class="n">chunk_size</span><span class="o">=</span><span class="mi">4500</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Translate a long text using Google Translate, respecting the</span>
 <span class="sd">    character limit by splitting on paragraph boundaries.</span>
@@ -8510,7 +8510,7 @@ has been subjected.</p>
     <span class="k">return</span> <span class="s2">"</span><span class="se">\n\n</span><span class="s2">"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">translated_chunks</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">translate_long_text_llm</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">source_name</span><span class="p">,</span> <span class="n">target_name</span><span class="p">,</span> <span class="n">chunk_size</span><span class="o">=</span><span class="mi">3000</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">translate_long_text_llm</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">source_name</span><span class="p">,</span> <span class="n">target_name</span><span class="p">,</span> <span class="n">chunk_size</span><span class="o">=</span><span class="mi">3000</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Translate a long text using Claude, chunking by paragraph groups.</span>
 <span class="sd">    Uses a lower chunk size to leave room for the system prompt and response.</span>

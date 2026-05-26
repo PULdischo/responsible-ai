@@ -7660,7 +7660,7 @@ See also: Liv G. d'Aliberti &amp; Manoel Horta Ribeiro, "The Illusion of Insight
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># @title Fetch IIIF manifest for [Photographs](https://eap.bl.uk/archive-file/EAP699-23-1)</span>
-<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
 <span class="n">manifest_url</span> <span class="o">=</span> <span class="s2">"https://eap.bl.uk/archive-file/EAP699-23-1/manifest"</span>
 
 <span class="n">header</span> <span class="o">=</span> <span class="p">{</span>
@@ -7702,7 +7702,7 @@ See also: Liv G. d'Aliberti &amp; Manoel Horta Ribeiro, "The Illusion of Insight
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">userdata</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">userdata</span>
 
 <span class="n">base_url</span><span class="o">=</span><span class="s2">"https://dashscope-intl.aliyuncs.com/compatible-mode/v1"</span>
 <span class="n">api_key</span><span class="o">=</span> <span class="n">userdata</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'DASHSCOPE_API_KEY'</span><span class="p">)</span> <span class="c1"># We will provide you with an API key for the workshop</span>
@@ -7736,18 +7736,18 @@ See also: Liv G. d'Aliberti &amp; Manoel Horta Ribeiro, "The Illusion of Insight
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">asyncio</span>
-<span class="kn">import</span> <span class="nn">aiohttp</span>
-<span class="kn">from</span> <span class="nn">openai</span> <span class="kn">import</span> <span class="n">OpenAI</span>
-<span class="kn">from</span> <span class="nn">tqdm.asyncio</span> <span class="kn">import</span> <span class="n">tqdm</span>
-<span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">import</span> <span class="nn">base64</span>
-<span class="kn">from</span> <span class="nn">mimetypes</span> <span class="kn">import</span> <span class="n">guess_type</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span> <span class="k">as</span> <span class="n">md</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">asyncio</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">aiohttp</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">openai</span><span class="w"> </span><span class="kn">import</span> <span class="n">OpenAI</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tqdm.asyncio</span><span class="w"> </span><span class="kn">import</span> <span class="n">tqdm</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">base64</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">mimetypes</span><span class="w"> </span><span class="kn">import</span> <span class="n">guess_type</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">Markdown</span> <span class="k">as</span> <span class="n">md</span>
 
 <span class="c1"># Function to download an image from a URL and return its base64 data URL representation</span>
-<span class="k">def</span> <span class="nf">url_to_base64_data_url</span><span class="p">(</span><span class="n">image_url</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">url_to_base64_data_url</span><span class="p">(</span><span class="n">image_url</span><span class="p">):</span>
     <span class="k">try</span><span class="p">:</span>
         <span class="c1"># Add a user-agent header to mimic a browser, which can sometimes help with access</span>
         <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">image_url</span><span class="p">,</span> <span class="n">stream</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -7883,8 +7883,8 @@ Test with: <a href="https://github.com/apjanco/files/blob/master/EAP1477_MFC_B04
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">userdata</span>
-<span class="kn">from</span> <span class="nn">portkey_ai</span> <span class="kn">import</span> <span class="n">Portkey</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">userdata</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">portkey_ai</span><span class="w"> </span><span class="kn">import</span> <span class="n">Portkey</span>
 
 
 <span class="n">AI_SANDBOX_KEY</span> <span class="o">=</span> <span class="n">userdata</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">'SANDBOX_KEY'</span><span class="p">)</span>
@@ -7923,12 +7923,12 @@ Test with: <a href="https://github.com/apjanco/files/blob/master/EAP1477_MFC_B04
 <span class="c1">#</span>
 <span class="c1"># For more information on the SDK see https://portkey.ai/docs/api-reference/sdk/python</span>
 <span class="c1">#</span>
-<span class="kn">from</span> <span class="nn">portkey_ai</span> <span class="kn">import</span> <span class="n">Portkey</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">base64</span>
-<span class="kn">from</span> <span class="nn">mimetypes</span> <span class="kn">import</span> <span class="n">guess_type</span>
-<span class="kn">from</span> <span class="nn">google.colab</span> <span class="kn">import</span> <span class="n">userdata</span>
-<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Markdown</span> <span class="k">as</span> <span class="n">md</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">portkey_ai</span><span class="w"> </span><span class="kn">import</span> <span class="n">Portkey</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">base64</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">mimetypes</span><span class="w"> </span><span class="kn">import</span> <span class="n">guess_type</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">userdata</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">Markdown</span> <span class="k">as</span> <span class="n">md</span>
 
 <span class="c1"># Before executing this code, define the API Key within an enironment variable in your OS</span>
 <span class="c1"># Linux BASH example: export PORTKEY_API_KEY=&lt;key provided to you&gt;</span>
@@ -7940,7 +7940,7 @@ Test with: <a href="https://github.com/apjanco/files/blob/master/EAP1477_MFC_B04
 
 
 <span class="c1"># Base 64 encode local image and return text to be included in AI prompt</span>
-<span class="k">def</span> <span class="nf">local_image_to_data_url</span><span class="p">(</span><span class="n">image_path</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">local_image_to_data_url</span><span class="p">(</span><span class="n">image_path</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">"""</span>
 <span class="sd">    Get the url of a local image</span>
 <span class="sd">    """</span>
@@ -7956,7 +7956,7 @@ Test with: <a href="https://github.com/apjanco/files/blob/master/EAP1477_MFC_B04
 
 
 <span class="c1"># This function will submit a simple prompt and image file to the chosen model</span>
-<span class="k">def</span> <span class="nf">image_prompt_example</span><span class="p">(</span><span class="n">model_to_be_used</span><span class="p">,</span> <span class="n">image_file</span><span class="p">,</span> <span class="n">prompt</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">image_prompt_example</span><span class="p">(</span><span class="n">model_to_be_used</span><span class="p">,</span> <span class="n">image_file</span><span class="p">,</span> <span class="n">prompt</span><span class="p">):</span>
     <span class="c1"># Establish a connection to your Azure OpenAI instance</span>
 
     <span class="k">try</span><span class="p">:</span>
@@ -8012,7 +8012,7 @@ Test with: <a href="https://github.com/apjanco/files/blob/master/EAP1477_MFC_B04
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">PIL</span><span class="w"> </span><span class="kn">import</span> <span class="n">Image</span>
 <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">"16187-scaled.jpg"</span><span class="p">)</span>
 </pre></div>
 </div>
