@@ -1,9 +1,10 @@
-const { EleventyI18nPlugin } = require("@11ty/eleventy");
+const { EleventyI18nPlugin, EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 const inclusiveLangPlugin = require("@11ty/eleventy-plugin-inclusive-language");
 const yaml = require("js-yaml");
 const { DateTime } = require("luxon");
 
 module.exports = function(eleventyConfig) {
+    eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
     eleventyConfig.addPlugin(EleventyI18nPlugin, {
       defaultLanguage: "en",
       errorMode: "never"
